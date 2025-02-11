@@ -34,3 +34,31 @@ Of course, some of these are completely useless (such as dividing by 1), but you
 ```
 x += y
 ```
+
+### Select Case
+`If` statements are incredibly powerful. However, they can be time consuming to type out, and awkward to use, with long statements. So, in some instances, a `Select Case` block is more suited for the job. Take this `If` statement:
+```
+If input = 0 Then
+    Do something
+Else If input = 1 Then
+    Do something else
+Else If input = 2 Then
+    Do another thing
+Else
+    Do something if none of the above were true
+End If
+```
+
+This could be condensed down massively, to
+```
+Select Case input
+    Case 0
+        Do something
+    Case 1
+        Do something else
+    Case 2
+        Do another thing
+    Case Else
+        Do something if none of the above were true
+End Select
+```
