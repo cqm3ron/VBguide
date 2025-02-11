@@ -1,2 +1,5 @@
-# visualbasicguide
-A GCSE Visual Basic Guide with many useful tips
+# Visual Basic Guide
+A GCSE Visual Basic Guide with many useful tips that I have picked up along the way
+
+### So, you're here because you don't know Visual Basic very well, but you want to.
+#### Or, you're here because I got fed up of you asking me for help. I'll let you decide which one.
