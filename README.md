@@ -9,8 +9,6 @@ I have attached links to specific chapters below, just click on any link to see 
 > Please open an issue in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
 
 ## Contents <!-- omit from toc -->
-- [Variable Iteration](#variable-iteration)
-- [Selecting Cases](#selecting-cases)
 - [Subroutines](#subroutines)
   - [Defining A Subroutine](#defining-a-subroutine)
   - [Calling A Subroutine](#calling-a-subroutine)
@@ -20,65 +18,12 @@ I have attached links to specific chapters below, just click on any link to see 
   - [Calling A Function](#calling-a-function)
   - [Function Parameters](#function-parameters)
   - [Return Values](#return-values)
+- [Structures / Records](#structures--records)
+  - [Defining Structures](#defining-structures)
+- [Variable Iteration](#variable-iteration)
+- [Selecting Cases](#selecting-cases)
 
 ## Guide <!-- omit from toc -->
-
-### Variable Iteration
-
-To increase the value of a variable `x` by 1, you may have been taught the following: 
-
-```vbnet
-x = x + 1
-```
-
-But, instead of this, you can do:
-```vbnet
-x += 1
-```
-
-This works for other operations too:
-```vbnet
-x -= 1 'subtracts 1 from x
-x *= 1 'multiplies x by 1
-x /= 1 'divides x by 1
-```
-Of course, some of these are completely useless (such as dividing by 1), but you can replace 1 with any other value, including another variable:
-```vbnet
-x += y
-```
-
-### Selecting Cases
-`If` statements are incredibly powerful. However, they can be time consuming to type out, and awkward to use, with long statements. So, in some instances, a `Select Case` block is more suited for the job. Take this `If` statement:
-```vbnet
-If input = 0 Then
-    Do something
-Else If input = 1 Then
-    Do something else
-Else If input = 2 Then
-    Do another thing
-Else
-    Do something if none of the above were true
-End If
-```
-
-This could be made much neater using a select case block:
-```vbnet
-Select Case input
-    Case 0
-        Do something
-    Case 1
-        Do something else
-    Case 2
-        Do another thing
-    Case Else
-        Do something if none of the above were true
-End Select
-```
-> You can also write lines such as `Case > 3`, which does exactly what you'd expect
-
-Both of these code blocks do the **exact same thing** as each other, which makes coding things such as user inputs, where you may want a user to input, say, 0, 1, 2, 3, or "exit" to select an option from a list. It just helps to make code look a bit neater.
-
-However, if statements can be more powerful
 
 ### Subroutines
 Subroutines help massively with organising your code. I have seen code before with a `Sub Main` that is over 300 lines long and it *physically hurts* when people tell me they don't know how subroutines work. They are incredibly simple and people seem to overcomplicate them a lot.
@@ -216,3 +161,126 @@ But, there's an issue here: I have told the program that my variable `x` will be
 ```
 
 So yeah, that's functions. They're really not too complicated. You should use them more. They are very helpful and keep your code more organised. Plus, you need to know them for your GCSEs. So it's a win-win situation really.
+
+### Structures / Records
+Structures & records both refer to the same thing. I will call them structures for the sake of this guide, since that's what they're called in VB. But you may hear either term used to describe them.
+
+I like to think of structures as adding 'attributes' to data. For example, if I am trying to create a program that stores data about people:
+
+```vbnet
+Console.WriteLine("Enter name")
+Dim name As String = Console.ReadLine()
+Console.WriteLine("Enter age")
+Dim age As Integer = Console.ReadLine()
+```
+This would work fine, for one person. But for every new user, I need a new set of variables. Not great.
+
+Maybe I could use lists or arrays?
+```vbnet
+Dim peopleNames as New List(Of String)
+Dim peopleAges as New List(Of Integer)
+
+Console.WriteLine("Enter name")
+peopleNames.Add(Console.ReadLine())
+Console.WriteLine("Enter age")
+peopleAges.Add(Console.ReadLine())
+```
+This also works, but it still isn't great. I have multiple lists! That's so annoying to reference every time I need to use the data.
+
+So, this is a perfect place for a structure.
+
+#### Defining Structures
+Defining a structure is very similar to [defining a subroutine](#defining-a-subroutine), but not quite the same. They must be within a module, but not within a subroutine.
+ Let's make a structure to contain the data I was trying to get in the previous step:
+
+```vbnet
+Structure UserData
+    Dim name as String
+    Dim age As Integer
+End Structure
+
+Sub Main()
+    Dim person As New UserData 'Make sure you define it as 'new' then the name of your structure
+    Console.WriteLine("Enter Name")
+    person.name = Console.ReadLine() 'The word after the dot refers to a variable inside your structure
+    Console.WriteLine("Enter Age")
+    person.age = Console.ReadLine()
+End Sub
+```
+So now I have one variable, `person`, storing both the name and age of a given person. I can then add this person to a list of people, like so:
+
+```vbnet
+Sub Main()
+    'Previous code
+    Dim people As New List(Of UserData) 'Define the list as a new list of your structure
+    people.Add(person)
+End Sub
+```
+
+Then if I want to reset the person variable to reuse it, I can, with the following line:
+```vbnet
+Sub Main()
+    'Previous code
+    person = Nothing
+End Sub
+```
+
+And that's structures folks! Again, relatively simple, but very useful.
+
+
+### Variable Iteration
+
+To increase the value of a variable `x` by 1, you may have been taught the following: 
+
+```vbnet
+x = x + 1
+```
+
+But, instead of this, you can do:
+```vbnet
+x += 1
+```
+
+This works for other operations too:
+```vbnet
+x -= 1 'subtracts 1 from x
+x *= 1 'multiplies x by 1
+x /= 1 'divides x by 1
+```
+Of course, some of these are completely useless (such as dividing by 1), but you can replace 1 with any other value, including another variable:
+```vbnet
+x += y
+```
+
+### Selecting Cases
+`If` statements are incredibly powerful. However, they can be time consuming to type out, and awkward to use, with long statements. So, in some instances, a `Select Case` block is more suited for the job. Take this `If` statement:
+```vbnet
+If input = 0 Then
+    Do something
+Else If input = 1 Then
+    Do something else
+Else If input = 2 Then
+    Do another thing
+Else
+    Do something if none of the above were true
+End If
+```
+
+This could be made much neater using a select case block:
+```vbnet
+Select Case input
+    Case 0
+        Do something
+    Case 1
+        Do something else
+    Case 2
+        Do another thing
+    Case Else
+        Do something if none of the above were true
+End Select
+```
+> You can also write lines such as `Case > 3`, which does exactly what you'd expect
+
+Both of these code blocks do the **exact same thing** as each other, which makes coding things such as user inputs, where you may want a user to input, say, 0, 1, 2, 3, or "exit" to select an option from a list. It just helps to make code look a bit neater.
+
+However, if statements can be more powerful in certain scenarios, so you should figure out which works best for your use case
