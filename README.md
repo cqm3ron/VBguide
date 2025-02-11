@@ -22,6 +22,10 @@ I have attached links to specific chapters below, just click on any link to see 
   - [Defining Structures](#defining-structures)
 - [Variable Iteration](#variable-iteration)
 - [Selecting Cases](#selecting-cases)
+- [Modulo (MOD) Operator](#modulo-mod-operator)
+- [Uses Of Data Types](#uses-of-data-types)
+- [Naming Conventions](#naming-conventions)
+- [Colouring text \& backgrounds](#colouring-text--backgrounds)
 
 ## Guide <!-- omit from toc -->
 
@@ -284,3 +288,93 @@ End Select
 Both of these code blocks do the **exact same thing** as each other, which makes coding things such as user inputs, where you may want a user to input, say, 0, 1, 2, 3, or "exit" to select an option from a list. It just helps to make code look a bit neater.
 
 However, if statements can be more powerful in certain scenarios, so you should figure out which works best for your use case
+
+### Modulo (MOD) Operator
+This is a very helpful arithmetic operator that seems to confuse many people, despite its simplicity. When you do a division manually, using the bus stop method, you are left with a remainder if the number does not divide evenly. This remainder is the value outputted by the MOD operator.
+Say I have two variables, x and y. If I want to get the remainder when x is divided by y, I would do this:
+```vbnet
+Dim x As Integer = 11
+Dim y As Integer = 5
+Console.WriteLine(x Mod y) 'This would output 1, since 11 / 5 = 2, remainder 1
+```
+
+### Uses Of Data Types
+Most coding languages contain the same data types, since they are key concepts of basic computer science. Below is a list of a few different common data types that you may find useful:
+
+| **Data Type** | **VB** | **What It Stores**                                                            |
+|---------------|------------|---------------------------------------------------------------|
+| Boolean       | Boolean    | True or False                                                                 |
+| Character     | Char       | Single character                                                              |
+| Date & Time   | Date       | Date & Time from midnight on January 1, 0001 to 11:59:59 on December 31, 9999|
+| Decimal       | Decimal    | Real numbers                                                                  |
+| String        | String     | A string of characters                                                        |
+
+There are more than just these, but these are the most commonly used in GCSE-level programming. The rest of the data types can be found in the Visual Basic docs
+
+### Naming Conventions
+This isn't so much a VB tip as it is a general coding tip. Naming your variables, subroutines, functions, and anything else you need to name whilst coding is very important. So, most coders use a similar system for variable naming.
+
+For single-word variables, you should write the name all lowercase, for example:
+```vbnet
+    Dim word As String
+```
+For multi-word variables, you should write the first word lowercase, and the rest of the words with the first letter capitalised, like so:
+```vbnet
+    Dim thisIsALongVariable As Char
+```
+Or
+```vbnet
+    Dim wowThisIsVeryLongAndCouldProbablyBeShortenedSignificantly As Date
+```
+
+And for functions, subroutines and structures, you should have all of the first letters capitalised, regardless of the number of words:
+```vbnet
+    Function ThisIsAFunction() As Integer
+    End Function
+
+    Sub ThisIsASub()
+    End Sub
+
+    Structure WowLookAStructure
+    End Structure
+```
+These aren't really as important as some of the other tips, but they help to make your code more consistent & predictable, along with being easier for other coders to understand.
+
+### Colouring text & backgrounds
+If you want to change the colour of the text in a VB console window, you reference the `Console.ForegroundColor` property. You can either set this to an integer between 0 and 15, with each integer corresponding to a colour as listed below, or by using a ConsoleColor.example, replacing 'example' there with a colour from the list below. There are 16 predefined colours, outlined in this table:
+
+| **ConsoleColor**        | **Integer Value** | **Description**                                      |
+|:-----------:|:-----:|--------------------------------------------------|
+| Black       | 0     | The color black.                                 |
+| DarkBlue    | 1     | The color dark blue.                             |
+| DarkGreen   | 2     | The color dark green.                            |
+| DarkCyan    | 3     | The color dark cyan (dark blue-green).           |
+| DarkRed     | 4     | The color dark red.                              |
+| DarkMagenta | 5     | The color dark magenta (dark purplish-red).      |
+| DarkYellow  | 6     | The color dark yellow (ochre).                   |
+| Gray        | 7     | The color gray.                                  |
+| DarkGray    | 8     | The color dark gray.                             |
+| Blue        | 9     | The color blue.                                  |
+| Green       | 10    | The color green.                                 |
+| Cyan        | 11    | The color cyan (blue-green).                     |
+| Red         | 12    | The color red.                                   |
+| Magenta     | 13    | The color magenta (purplish-red).                |
+| Yellow      | 14    | The color yellow.                                |
+| White       | 15    | The color white.                                 |
+
+So, for example:
+
+```vbnet
+Console.ForegroundColor = ConsoleColor.DarkGreen
+Console.ForegroundColor = 2 'both of these lines do the same thing: set the text to dark green
+```
+
+And to set the background colour, you reference the `Console.BackgroundColor` property in the same way, for example:
+
+```vbnet
+Console.BackgroundColor = ConsoleColor.Magenta
+Console.BackgroundColour = 13 'again, both lines set the background colour to magenta
+```
+
+> [!NOTE]
+> The background colour doesn't affect the whole console window unless you try to make it. It only affects the lines after you set the colour, and only when something is outputted to the console. To see what I mean, give it a try in a VB console app.
