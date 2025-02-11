@@ -1,5 +1,5 @@
 # Visual Basic Guide
-## A GCSE Visual Basic Guide with many useful tips that I have picked up along the way
+## A GCSE Visual Basic Guide with many useful tips that I have picked up along my VB.NET journey
 
 So, you're here because you don't know Visual Basic very well, but you want to.
 
@@ -9,6 +9,8 @@ I have attached links to specific chapters below, just click on any link to see 
 
 ## Contents
 - [Iterating Variables](#variable-iteration)
+\
+## Guide
 
 ### Variable Iteration
 
