@@ -9,7 +9,6 @@ I have attached links to specific chapters below, just click on any link to see 
 
 ## Contents
 - [Iterating Variables](#variable-iteration)
-\
 ## Guide
 
 ### Variable Iteration
