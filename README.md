@@ -5,7 +5,8 @@ So, you're here because you don't know Visual Basic very well, but you want to. 
 
 I have attached links to specific chapters below, just click on any link to see more about a topic.
 
-
+> [!IMPORTANT]
+> Please open an issue in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
 
 ## Contents <!-- omit from toc -->
 - [Variable Iteration](#variable-iteration)
@@ -26,29 +27,29 @@ I have attached links to specific chapters below, just click on any link to see 
 
 To increase the value of a variable `x` by 1, you may have been taught the following: 
 
-```
+```vbnet
 x = x + 1
 ```
 
 But, instead of this, you can do:
-```
+```vbnet
 x += 1
 ```
 
 This works for other operations too:
-```
+```vbnet
 x -= 1 'subtracts 1 from x
 x *= 1 'multiplies x by 1
 x /= 1 'divides x by 1
 ```
 Of course, some of these are completely useless (such as dividing by 1), but you can replace 1 with any other value, including another variable:
-```
+```vbnet
 x += y
 ```
 
 ### Selecting Cases
 `If` statements are incredibly powerful. However, they can be time consuming to type out, and awkward to use, with long statements. So, in some instances, a `Select Case` block is more suited for the job. Take this `If` statement:
-```
+```vbnet
 If input = 0 Then
     Do something
 Else If input = 1 Then
@@ -61,7 +62,7 @@ End If
 ```
 
 This could be made much neater using a select case block:
-```
+```vbnet
 Select Case input
     Case 0
         Do something
@@ -86,7 +87,7 @@ Subroutines help massively with organising your code. I have seen code before wi
 #### Defining A Subroutine
 To define a subroutine, simply go outside of `Sub Main` but inside `Module Program`, and type in the following code:
 
-```
+```vbnet
 Module Program
 
     Sub Main()
@@ -102,8 +103,8 @@ Personally, I like to put my custom subroutines below Sub Main, just to give me 
 
 #### Calling A Subroutine
 Take the sub we made in the previous step, `MyNewSub()`. This can be called **anywhere** in your code (but usually in `Sub Main` if you are making a simple program), simply by typing its name and the brackets, as so:
-```
-    Sub Main()
+```vbnet
+Sub Main()
         MyNewSub()
     End Sub
 
@@ -115,7 +116,7 @@ This would run `MyNewSub()` whenever `Sub Main` runs, so in practice that would 
 
 #### Parameters
 Parameters are essentially values that you 'pass over' to a subroutine. For example, if I had an integer variable `x` in one of my subroutines:
-```
+```vbnet
     Sub Main()
         Dim x As String = 10
         MyNewSub()
@@ -124,7 +125,7 @@ Parameters are essentially values that you 'pass over' to a subroutine. For exam
 and I wanted to use my new subroutine to, say, multiply that value by 2. But there's a problem: variables created within subroutines are stuck inside the sub they are in. Think of it as if the `Sub` and `End Sub` blocks act as a 'wall' around the variable; it can't escape. Unless, of course, you give it a hole that is the perfect shape & size for it to fit through. This is effectively what parameters are.
 So, to pass over my variable `x` to my new subroutine, I would do this:
 
-```
+```vbnet
     Sub Main()
         MyNewSub(x)
     End Sub
@@ -136,7 +137,7 @@ So, to pass over my variable `x` to my new subroutine, I would do this:
 
 But there's another problem here: **my new sub is not expecting a value**. So, this is where the second part of parameters come in. What I'd do in this scenario is the following:
 
-```
+```vbnet
     Sub Main()
         MyNewSub(x)
     End Sub
@@ -161,7 +162,7 @@ Functions are just [subroutines](#subroutines) where a value is returned to the 
 #### Defining A Function
 To define a function, it is the same as [defining a subroutine](#defining-a-subroutine), but you write 'Function' rather than 'Sub'. Easy, right? Just like this:
 
-```
+```vbnet
 Module Program
 
     Sub Main()
@@ -176,7 +177,7 @@ End Module
 
 #### Calling A Function
 Again, this is done the same way as [calling a subroutine](#calling-a-subroutine), just by writing its name with the brackets (space for parameters):
-```
+```vbnet
     Sub Main()
         MyNewFunction()
     End Sub
@@ -193,7 +194,7 @@ These behave exactly the same as subroutines, with absolutely no differences. If
 This is where functions get interesting. In a subroutine, the parameters are stuck in the sub once execution has finished. So if I multiply a variable by 2 in a sub, the original parameter still keeps its original value in the origin subroutine.
 In a function, though, a return value is **required**. This means that functions can be used for variable assignment, like so:
 
-```
+```vbnet
     Sub Main()
         Dim x As Integer
         x = MyNewFunction()
@@ -207,7 +208,7 @@ In a function, though, a return value is **required**. This means that functions
 
 But, there's an issue here: I have told the program that my variable `x` will be an integer, but the function could *technically* give another value as its return value. So, we should specify what data type the function will output, like this:
 
-```
+```vbnet
     Function MyNewFunction() As Integer 'Notice that this line specifies the data type now
         'Do Something
         Return something
