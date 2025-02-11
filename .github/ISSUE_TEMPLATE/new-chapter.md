@@ -1,6 +1,6 @@
 ---
-name: New chapter or edit
-about: Suggest a new chapter to be added to the guide, or a chapter that needs editing
+name: New chapter
+about: Suggest a new chapter to be added to the guide.
 title: "[NEW CHAPTER]"
 labels: documentation
 assignees: cqm3ron

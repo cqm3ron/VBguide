@@ -1,5 +1,5 @@
 ---
-name: Problem with documentaiton
+name: Problem with documentation
 about: Create a report to help us improve
 title: "[PROBLEM] "
 labels: problem
