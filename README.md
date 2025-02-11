@@ -5,6 +5,8 @@ So, you're here because you don't know Visual Basic very well, but you want to. 
 
 I have attached links to specific chapters below, just click on any link to see more about a topic.
 
+
+
 ## Contents <!-- omit from toc -->
 - [Variable Iteration](#variable-iteration)
 - [Selecting Cases](#selecting-cases)
@@ -144,8 +146,11 @@ But there's another problem here: **my new sub is not expecting a value**. So, t
     End Sub
 ```
 
-Notice how I specify the data type in the part where `MyNewSub` expects a variable. This is important because if you don't do this, VB doesn't know if it will have a string, integer, boolean, date, time, or something else, and it doesn't like that.
-Also notice how when I am calling the subroutine, I don't need to specify the data type. This, again, is important.
+> [!NOTE]
+> I specify the data type in the part where `MyNewSub` expects a variable. This is important because if you don't do this, VB doesn't know if it will have a string, integer, boolean, date, time, or something else, and it doesn't like that.
+
+> [!NOTE]
+> Also notice how when I am calling the subroutine, I don't need to specify the data type. This, again, is important.
 
 I can then use this data **inside the subroutine** to output or calculate more things. However, I cannot normally pass the multiplied value back to the original subroutine using regular subroutines. To do that, I would have to use a [function](#functions)
 
