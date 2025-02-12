@@ -324,7 +324,7 @@ For multi-word variables, you should write the first word lowercase, and the res
 ```
 Or
 ```vbnet
-    Dim wowThisIsVeryLongAndCouldProbablyBeShortenedSignificantly As Date
+    Dim wowThisIsVeryLongAndCouldProbablyBeShortenedSignificantlyButIWantedToMakeItAsComicallyLongAsPossible As Date
 ```
 
 And for functions, subroutines and structures, you should have all of the first letters capitalised, regardless of the number of words:
@@ -388,6 +388,8 @@ And to set the background colour, you reference the `Console.BackgroundColor` pr
 Console.BackgroundColor = ConsoleColor.Magenta
 Console.BackgroundColour = 13 'again, both lines set the background colour to magenta
 ```
+
+
 
 > [!NOTE]
 > The background colour doesn't affect the whole console window unless you try to make it. It only affects the lines after you set the colour, and only when something is outputted to the console. To see what I mean, give it a try in a VB console app.
