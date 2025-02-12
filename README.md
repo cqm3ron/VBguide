@@ -393,7 +393,7 @@ Console.BackgroundColour = 13 'again, both lines set the background colour to ma
 > The background colour doesn't affect the whole console window unless you try to make it. It only affects the lines after you set the colour, and only when something is outputted to the console. To see what I mean, give it a try in a VB console app.
 
 ### Random Number Generation
-There are a few ways to go about generating random numbers in Visual Basic, but my preferred method (and, _technically_, the most random method, although unless you are doing advanced cryptography or need INCREDIBLY random numbers this doesn't really matter) is the one I will outline first. Say I have an integer variable, `x`, that I want to be random number in between two other variables, `min` and `max`:
+There are a few ways to go about generating random numbers in Visual Basic, but my preferred method (and, _technically_, the most random method, although unless you are doing advanced cryptography or need INCREDIBLY random numbers this doesn't really matter) is the one I will outline. Say I have an integer variable, `x`, that I want to be random number in between two other variables, `min` and `max`:
 ```vbnet
 Dim x, min, max As Integer
 min = 1 'The minimum value
@@ -404,4 +404,24 @@ Randomize()
 x = Int(Rnd() * max) + min
 ```
 To generate a random number using this method, the `Randomize()` must be called only once at any point before generating the number. I like to put it right at the top of my `Sub Main` in most programs I create
-This code would assign a random integer value that is greater than or equal to the value of `min` (1, in this instance), and less than but **not equal to** the value of `max` (10 in this instance). Or, in [interval notation](https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals), [1,10) 
+This code would assign a random integer value that is greater than or equal to the value of `min` (1, in this instance), and less than but **not equal to** the value of `max` (10 in this instance). Or, in [interval notation](https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals), [1,10)
+
+### Concatenation
+Concatenation is the joining of multiple strings together, and in VB is relatively simple, and the language gives you a few options of how to do it.
+For example, if I wanted to join the string "Hello" with the string "World", with a space in the middle, I could do any of the following:
+
+```vbnet
+Console.WriteLine("Hello" + " " + "World")
+Console.WriteLine("Hello" & " " & "World")
+Console.WriteLine("{0} {1}", "Hello", "World")
+```
+But what if I have two variables, or one predefined string and one variable? Then, I would do this:
+```vbnet
+Dim x As String = "Hello"
+Dim y As String = "World"
+
+Console.WriteLine(x & " " & y)
+Console.WriteLine(x + " " + y)
+Console.WriteLine("{0} {1}", x, y)
+Console.WriteLine($"{x} {y}") 'notice the $ symbol after the bracket but before the double quotes
+```
