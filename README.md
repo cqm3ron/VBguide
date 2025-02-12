@@ -1,7 +1,8 @@
 # Visual Basic Guide <!-- omit from toc -->
 ## A GCSE Visual Basic Guide with many useful tips that I have picked up along my time programming <!-- omit from toc -->
 
-So, you're here because you don't know Visual Basic very well, but you want to. Or, you're here because I got fed up of you asking me for help and sent you here. I'll let you decide what your reason is, but I hope this guide helps nonetheless.
+So, you're here because you don't know Visual Basic very well, but you want to. I appreciate that! VB is widely considered a _kinda useless_ language, but for some reason it is one of the options on the GCSE AQA Computer Science specification. And you know what? It sort of makes sense. It is a great starting point for anyone looking to code, and it gives you a great idea of the .NET framework so you can eventually move on to C#, arguably the most useful programming language. So, for now, let's think of it as a stepping stone to a better time, and I hope this guide helps you to understand VB a bit more than you did before.
+Thanks for visiting this guide. If you see anything wrong, think anything is missing, or just generally have any other suggestions, please do not hesitate to [open an issue](../../issues) and let me know. With that said, enjoy the guide!
 
 I have attached links to specific chapters below, just click on any link to see more about a topic.
 
