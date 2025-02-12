@@ -399,8 +399,9 @@ Dim x, min, max As Integer
 min = 1 'The minimum value
 max = 10 'The maximum value
 
-Randomize() 'To generate a random number using this method, this function must be called only once at any point before generating the number. I like to put it right at the top of my `Sub Main` in most programs I do
+Randomize()
 
 x = Int(Rnd() * max) + min
 ```
-This code would assign a random value that is greater 
+To generate a random number using this method, the `Randomize()` must be called only once at any point before generating the number. I like to put it right at the top of my `Sub Main` in most programs I create
+This code would assign a random integer value that is greater than or equal to the value of `min` (1, in this instance), and less than but **not equal to** the value of `max` (10 in this instance). Or, in [interval notation](https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals), [1,10) 
