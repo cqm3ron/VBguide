@@ -425,3 +425,23 @@ Console.WriteLine(x + " " + y)
 Console.WriteLine("{0} {1}", x, y)
 Console.WriteLine($"{x} {y}") 'notice the $ symbol after the bracket but before the double quotes
 ```
+
+### Arrays & Lists
+Arrays are just a collection of the same data type, like a list of values. Lists are just variable-size arrays.
+When defining an array, you must specify the size of the array. This cannot be changed later on, except with some janky techniques which you should never do.
+To define an array in VB, you can simply type:
+```vbnet
+Dim myArray(size) As datatype 'replace "datatype" with any data type or even the name of a [structure](#structures--records)
+```
+Bear in mind that the size of the array is zero-based, so an array of size 0 can store 1 item, and an array of size 1 can store 2.
+Then, if I wanted to have an array of, for example, strings, I could do the following:
+```vbnet
+Dim colours(6) As String
+colours(0) = "Red"
+colours(1) = "Orange"
+colours(2) = "Yellow"
+colours(3) = "Green"
+colours(4) = "Blue"
+colours(5) = "Indigo"
+colours(6) = "Violet"
+```
