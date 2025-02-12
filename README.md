@@ -340,6 +340,19 @@ And for functions, subroutines and structures, you should have all of the first 
 ```
 These aren't really as important as some of the other tips, but they help to make your code more consistent & predictable, along with being easier for other coders to understand.
 
+### How To Name Your Variables
+This is just a quick little tip, but make sure to name your variables with sensible names. In computing, we call these 'meaningful identifiers', which ensure that you know what a variable is for. For example, instead of doing this:
+```vbnet
+    Dim myVariable As Integer
+```
+
+You could do
+```vbnet
+  Dim lengthOfSide As Integer
+```
+
+These are just little things that make debugging one heck of a lot easier, and make it easier for others to read.
+
 ### Colouring text & backgrounds
 If you want to change the colour of the text in a VB console window, you reference the `Console.ForegroundColor` property. You can either set this to an integer between 0 and 15, with each integer corresponding to a colour as listed below, or by using a ConsoleColor.example, replacing 'example' there with a colour from the list below. There are 16 predefined colours, outlined in this table:
 
