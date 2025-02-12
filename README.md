@@ -389,7 +389,18 @@ Console.BackgroundColor = ConsoleColor.Magenta
 Console.BackgroundColour = 13 'again, both lines set the background colour to magenta
 ```
 
-
-
 > [!NOTE]
 > The background colour doesn't affect the whole console window unless you try to make it. It only affects the lines after you set the colour, and only when something is outputted to the console. To see what I mean, give it a try in a VB console app.
+
+### Random Number Generation
+There are a few ways to go about generating random numbers in Visual Basic, but my preferred method (and, _technically_, the most random method, although unless you are doing advanced cryptography or need INCREDIBLY random numbers this doesn't really matter) is the one I will outline first. Say I have an integer variable, `x`, that I want to be random number in between two other variables, `min` and `max`:
+```vbnet
+Dim x, min, max As Integer
+min = 1 'The minimum value
+max = 10 'The maximum value
+
+Randomize() 'To generate a random number using this method, this function must be called only once at any point before generating the number. I like to put it right at the top of my `Sub Main` in most programs I do
+
+x = Int(Rnd() * max) + min
+```
+This code would assign a random value that is greater 
