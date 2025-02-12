@@ -26,7 +26,11 @@ I have attached links to specific chapters below, just click on any link to see 
 - [Modulo (MOD) Operator](#modulo-mod-operator)
 - [Uses Of Data Types](#uses-of-data-types)
 - [Naming Conventions](#naming-conventions)
+- [How To Name Your Variables](#how-to-name-your-variables)
 - [Colouring text \& backgrounds](#colouring-text--backgrounds)
+- [Random Number Generation](#random-number-generation)
+- [Concatenation](#concatenation)
+- [Arrays \& Lists](#arrays--lists)
 
 ## Guide <!-- omit from toc -->
 
@@ -446,3 +450,11 @@ colours(4) = "Blue"
 colours(5) = "Indigo"
 colours(6) = "Violet"
 ```
+I could then reference each position in the array as if it were just a variable:
+```vbnet
+If colours(0) = "Red" Then
+    Console.WriteLine("This is good...")
+End If
+```
+
+(awaiting more content)
