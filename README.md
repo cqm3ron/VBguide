@@ -457,4 +457,4 @@ If colours(0) = "Red" Then
 End If
 ```
 ---
-(awaiting more content)
+$${\color{red}(awaiting more content)}$$
