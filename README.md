@@ -33,6 +33,13 @@ And finally, before I continue, I want to direct you to the [Visual Basic Docume
 - [Random Number Generation](#random-number-generation)
 - [Concatenation](#concatenation)
 - [Arrays \& Lists](#arrays--lists)
+- [List \& Array Operations](#list--array-operations)
+- [2D Arrays](#2d-arrays)
+- [String Handling Operations](#string-handling-operations)
+- [Strings To Character Arrays](#strings-to-character-arrays)
+- [String Formatting](#string-formatting)
+- [File Management](#file-management)
+- ['For Each' Iteration](#for-each-iteration)
 
 ## Guide <!-- omit from toc -->
 
