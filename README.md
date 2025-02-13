@@ -1,5 +1,5 @@
 # Visual Basic Guide: Core Concepts & Useful Tips <!-- omit from toc -->
-## A GCSE Visual Basic Guide with many useful tips that I have picked up along my time programming <!-- omit from toc -->
+## A GCSE Visual Basic Guide with many useful tips that I have picked up during my time programming <!-- omit from toc -->
 
 So, you're here because you don't know Visual Basic very well, but you want to. I appreciate that! VB is widely considered a _kinda useless_ language, but for some reason it is one of the options on the GCSE AQA Computer Science specification. And you know what? It sort of makes sense. It is a great starting point for anyone looking to code, and it gives you a great idea of the .NET framework so you can eventually move on to C#, arguably the most useful programming language. So, for now, let's think of it as a stepping stone to a better time, and I hope this guide helps you to understand VB a bit more than you did before.
 Thanks for visiting this guide. If you see anything wrong, think anything is missing, or just generally have any other suggestions, please do not hesitate to [open an issue](../../issues) and let me know. With that said, enjoy the guide!
@@ -8,6 +8,8 @@ I have attached links to specific chapters below, just click on any link to see 
 
 > [!IMPORTANT]
 > Please [open an issue](../../issues) in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
+
+And finally, before I continue, I want to direct you to the [Visual Basic Documentation](https://learn.microsoft.com/en-us/dotnet/visual-basic/). This contains an incredibly useful guide with all possible use cases and examples for every part of Visual Basic. Additionally, [DotNet Pearls](https://www.dotnetperls.com/category_vb-net) contain some very useful documentation with good examples. But, I also recommend that you give this guide a read through, as it has more real-life examples. With that said though, all of these resources can be used together to make you a VB master.
 
 ## Contents <!-- omit from toc -->
 - [Subroutines](#subroutines)
