@@ -457,5 +457,37 @@ If colours(0) = "Red" Then
     Console.WriteLine("This is good...")
 End If
 ```
+Arrays are very helpful for storing either permenant lists of data or lists of data that don't need to be expanded upon. For example, if you wanted a collection of all of the Monopoly board properties, you might use an array of a structure, since you don't _generally_ add more properties to the board during the middle of a game (please correct me on this if there is some weird DIY version of Monopoly that I don't know about!). But if I wanted a collection of all of the players in the game, I don't want to have to manually go in to the code to add each player before running a program. So this would be a perfect use case for a list, a variable-size array. To define & initialise a list, you use the following code:
+```vbnet
+Dim myNewList As New List(Of DataType) 'replacing data type with, strangely, any data type.
+```
+Notice how you don't need to select the size of the list when defining it; this is because to add to a list you do the following:
+```vbnet
+myNewList.Add(data)
+```
+This means that you can, in theory, add infinite items to a list whilst a program is running. This makes them much better for things such as player lists in games, comment systems, contact systems, and much more. Anything that updates & may need to be added to while a program is running, really.
+
+### List & Array Operations
+This is a fairly simple section - just a list (ironic) of things you can do to a list or array:
+
+```vbnet
+'ARRAYS:
+Dim array(9) As String 'a demonstration array that can hold 10 elements
+array(index) = "Hello" 'index here refers to any positive integer within the bounds of the array (0-9)
+array(index) = Nothing 'empty an index of an array
+
+'Iterating through an array:
+For Each element As String in array '"element" here is just the name of a variable - it could be x, or i, or anything else
+  Console.WriteLine(element) 'outputs the current element
+Next
+
+'OR:
+
+For i = 0 To array.Length - 1 'to avoid out-of-bounds errors because .length is 1-based but arrays are 0-based
+  Console.WriteLine(array(i)) 'outputs the current element
+Next
+```
+
+
 ---
 _✨ awaiting more content ✨_
