@@ -436,8 +436,9 @@ Arrays are just a collection of the same data type, like a list of values. Lists
 When defining an array, you must specify the size of the array. This cannot be changed later on, except with some janky techniques which you should never do.
 To define an array in VB, you can simply type:
 ```vbnet
-Dim myArray(size) As datatype 'replace "datatype" with any data type or even the name of a [structure](#structures--records)
+Dim myArray(size) As datatype
 ```
+Replace "datatype" with any data type or even the name of a [structure](#structures--records)
 Bear in mind that the size of the array is zero-based, so an array of size 0 can store 1 item, and an array of size 1 can store 2.
 Then, if I wanted to have an array of, for example, strings, I could do the following:
 ```vbnet
