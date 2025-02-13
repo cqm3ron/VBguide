@@ -488,6 +488,18 @@ For i = 0 To array.Length - 1 'to avoid out-of-bounds errors because .length is 
 Next
 ```
 
+```vbnet
+'LISTS:
+Dim items As New List(Of String)
+items.Add("item") 'adds an item to the list with the parameters as the contents
+items.Remove("item") 'removes the first item whose contents match the parameters given
+items.RemoveAt(0) 'removes the item at index 0 of the list
+items.Insert(index, "item") 'inserts the string "item" at index position "index"
+x = items.Count '(where x is an integer) gets the number of items (1-based) in the list
+items.Reverse() 'reverses the list so the last element becomes the first element and vice versa
+```
+
+I think that's most of the important ones, so let me know if I've missed any particularly useful operations.
 
 ---
 _✨ awaiting more content ✨_
