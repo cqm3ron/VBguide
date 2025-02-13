@@ -36,13 +36,14 @@ And finally, before I continue, I want to direct you to the [Visual Basic Docume
 - [List \& Array Operations](#list--array-operations)
 - [2D Arrays](#2d-arrays)
 - [String Handling Operations](#string-handling-operations)
+- [Strings = Character Arrays](#strings--character-arrays)
 - [Strings To Character Arrays](#strings-to-character-arrays)
+- [Character Arrays To Strings](#character-arrays-to-strings)
 - [String Formatting](#string-formatting)
 - [File Management](#file-management)
 - ['For Each' Iteration](#for-each-iteration)
 
 ## Guide <!-- omit from toc -->
-
 ### Subroutines
 Subroutines help massively with organising your code. I have seen code before with a `Sub Main` that is over 300 lines long and it *physically hurts* when people tell me they don't know how subroutines work. They are incredibly simple and people seem to overcomplicate them a lot.
 
@@ -514,7 +515,37 @@ I think that's most of the important ones, so let me know if I've missed any par
 
 ### String Handling Operations
 
+### Strings = Character Arrays
+In VB, strings function internally as arrays of characters. This means, that to **get** (not set, unfortunately) the character at a given zero-based integer position, let's say `x`, of a string, you can simply type the following:
+
+```vbnet
+Dim myString As String = "Hello World"
+Console.WriteLine(myString(0)) 'outputs capital H
+Console.WriteLine(myString(2)) 'outputs lowercase l
+
+'This can also be combined with other functions such as:
+
+Console.WriteLine(myString(myString.Length - 1)) 'outputs the last letter in the string, a lowercase d
+```
+This can be very helpful for checking how many letters in two strings differ, for example:
+
+```vbnet
+Dim string1 As String = "potatoes"
+Dim string2 As String = "potateee"
+Dim differentLetterCounter As Integer = 0
+
+For i = 0 To string1.Length - 1
+    If Not (string1(i) = string2(i)) Then
+        differentLetterCounter += 1
+    End If
+Next
+Console.WriteLine(differentLetterCounter) 'outputs 6 in this scenario
+```
+It is a relatively niche use case, but can still be very helpful in different scenarios
+
 ### Strings To Character Arrays
+
+### Character Arrays To Strings
 
 ### String Formatting
 
