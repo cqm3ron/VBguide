@@ -7,7 +7,7 @@ Thanks for visiting this guide. If you see anything wrong, think anything is mis
 I have attached links to specific chapters below, just click on any link to see more about a topic.
 
 > [!IMPORTANT]
-> Please open an issue in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
+> Please [open an issue](../../issues) in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
 
 ## Contents <!-- omit from toc -->
 - [Subroutines](#subroutines)
@@ -501,5 +501,20 @@ items.Reverse() 'reverses the list so the last element becomes the first element
 
 I think that's most of the important ones, so let me know if I've missed any particularly useful operations.
 
+### 2D Arrays
+
+### String Handling Operations
+
+### Strings To Character Arrays
+
+### String Formatting
+
+### File Management
+
+### 'For Each' Iteration
+
 ---
 _✨ awaiting more content ✨_
+
+> [!IMPORTANT]
+> Please [open an issue](../../issues) in this repo if you think I should add something else to this guide. I aim to try to maintain this for as long as possible!
