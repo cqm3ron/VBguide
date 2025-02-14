@@ -553,6 +553,29 @@ It is a relatively niche use case, but can still be very helpful in different sc
 
 ### 'For Each' Iteration
 
+When iterating through a list, array, characters in a string, or most other types of collection, instead of using a regular `For` loop, you can use a `For Each` loop which simplifies the process slightly.
+Take this array:
+```vbnet
+Dim words() As String = {"Potato", "Salad", "Pizza"}
+```
+
+If I wanted to output each word in the array, I could do this:
+
+```vbnet
+For word As Integer = 0 To words.Length - 1
+    Console.WriteLine(words(word))
+Next
+```
+
+Which does work, however it looks very long & isn't very easy to read. Instead, I can do this:
+
+```vbnet
+For Each word As String In words
+Console.WriteLine(word)
+Next
+```
+Both of these code blocks acheive the same goal, but `For Each` loops just make it slightly easier & simpler to read.
+
 ---
 _✨ awaiting more content ✨_
 
