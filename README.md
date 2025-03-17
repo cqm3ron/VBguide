@@ -545,11 +545,73 @@ It is a relatively niche use case, but can still be very helpful in different sc
 
 ### Strings To Character Arrays
 
+To convert a string to an array of characters (or perhaps a list if you want to modify it more easily), you can use the simple statement:
+```vbnet
+Dim x As String = "Potato" 'my test string - this can be anything
+Dim y() As Char = x.ToCharArray
+```
+
+So now, y is an array of characters with the following data:
+y(0) = 'P'
+y(1) = 'o'
+y(2) = 't'
+y(3) = 'a'
+y(4) = 't'
+y(5) = 'o'
+
+And you can reference this as you would an array.
+If you wanted this to be a variable length array (list), you can add the following to the end of the definition:
+```vbnet
+Dim y As List(Of String) = x.ToCharArray.ToList
+```
+And now you can modify that as normal
+
 ### Character Arrays To Strings
 
 ### String Formatting
 
 ### File Management
+
+#### Reading a file
+
+To store all the text in a file stored at `path`, you can use these two lines of code:
+
+```vbnet
+        Dim path As String = "/path/to/your/file.txt"
+        Dim x() As String = IO.File.ReadAllLines(path)
+```
+
+If you want, you can also omit the first variable, and just do this:
+
+```vbnet
+        Dim x() As String = IO.File.ReadAllLines("/path/to/your/file.txt")
+```
+They both do the same thing.
+
+#### Writing to a file
+
+You can also write a file. If you have an array of strings, you can do the following:
+```vbnet
+        Dim path As String = "/path/to/your/file.txt"
+        Dim x() As String = {"potato", "waffles", "crisps", "chips", "roasties"}
+        IO.File.WriteAllLines(path, x)
+```
+Which would make the file located at the `path` variable look like this:
+
+```
+potato
+waffles
+crisps
+chips
+roasties
+```
+
+#### Creating a file
+File creation is really simple. If you want to create a new file at the location of `path`, simply use the following code:
+
+```vbnet
+IO.File.Create(path)
+```
 
 ### 'For Each' Iteration
 
