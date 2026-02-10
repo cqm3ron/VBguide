@@ -343,7 +343,8 @@ Or
     Dim wowThisIsVeryLongAndCouldProbablyBeShortenedSignificantlyButIWantedToMakeItAsComicallyLongAsPossible As Date
 ```
 
-> [!NOTE] Fun fact: this naming convention is called Camel Case.
+> [!NOTE]
+> Fun fact: this naming convention is called Camel Case.
 
 And for functions, subroutines and structures, you should have all of the first letters capitalised, regardless of the number of words:
 ```vbnet
@@ -357,7 +358,8 @@ And for functions, subroutines and structures, you should have all of the first 
     End Structure
 ```
 
-> [!NOTE] Fun fact: this naming convention is called Pascal Case.
+> [!NOTE]
+> Fun fact: this naming convention is called Pascal Case.
 
 These aren't really as important as some of the other tips, but they help to make your code more consistent & predictable, along with being easier for other coders to understand.
 
