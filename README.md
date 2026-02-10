@@ -152,7 +152,7 @@ Again, this is done the same way as [calling a subroutine](#calling-a-subroutine
 ```
 
 #### Function Parameters
-These behave exactly the same as subroutines, with absolutely no differences. If you are unsure of how those work, have another read [here](#parameters).
+These behave exactly the same as subroutine parameters, with absolutely no differences. If you are unsure of how those work, have another read [here](#parameters).
 
 #### Return Values
 This is where functions get interesting. In a subroutine, the parameters are stuck in the sub once execution has finished. So if I multiply a variable by 2 in a sub, the original parameter still keeps its original value in the origin subroutine.
@@ -272,6 +272,7 @@ x += y
 ```
 
 ### Selecting Cases
+
 `If` statements are incredibly powerful. However, they can be time consuming to type out, and awkward to use, with long statements. So, in some instances, a `Select Case` block is more suited for the job. Take this `If` statement:
 ```vbnet
 If input = 0 Then
@@ -316,11 +317,11 @@ Console.WriteLine(x Mod y) 'This would output 1, since 11 / 5 = 2, remainder 1
 ### Uses Of Data Types
 Most coding languages contain the same data types, since they are key concepts of basic computer science. Below is a list of a few different common data types that you may find useful:
 
-| **Data Type** | **VB** | **What It Stores**                                                            |
-|---------------|------------|---------------------------------------------------------------|
+| **Data Type** | **VB** | **What It Stores**                                                                |
+|---------------|------------|-------------------------------------------------------------------------------|
 | Boolean       | Boolean    | True or False                                                                 |
 | Character     | Char       | Single character                                                              |
-| Date & Time   | Date       | Date & Time from midnight on January 1, 0001 to 11:59:59 on December 31, 9999|
+| Date & Time   | Date       | Date & Time from midnight on January 1, 0001 to 11:59:59 on December 31, 9999 |
 | Decimal       | Decimal    | Real numbers                                                                  |
 | String        | String     | A string of characters                                                        |
 
@@ -342,6 +343,8 @@ Or
     Dim wowThisIsVeryLongAndCouldProbablyBeShortenedSignificantlyButIWantedToMakeItAsComicallyLongAsPossible As Date
 ```
 
+> [!NOTE] Fun fact: this naming convention is called Camel Case.
+
 And for functions, subroutines and structures, you should have all of the first letters capitalised, regardless of the number of words:
 ```vbnet
     Function ThisIsAFunction() As Integer
@@ -353,10 +356,13 @@ And for functions, subroutines and structures, you should have all of the first 
     Structure WowLookAStructure
     End Structure
 ```
+
+> [!NOTE] Fun fact: this naming convention is called Pascal Case.
+
 These aren't really as important as some of the other tips, but they help to make your code more consistent & predictable, along with being easier for other coders to understand.
 
 ### How To Name Your Variables
-This is just a quick little tip, but make sure to name your variables with sensible names. In computing, we call these 'meaningful identifiers', which ensure that you know what a variable is for. For example, instead of doing this:
+Make sure to name your variables with sensible names. In computing, we call these 'meaningful identifiers', which ensure that you know what a variable is for. For example, instead of doing this:
 ```vbnet
     Dim myVariable As Integer
 ```
@@ -408,7 +414,7 @@ Console.BackgroundColour = 13 'again, both lines set the background colour to ma
 > The background colour doesn't affect the whole console window unless you try to make it. It only affects the lines after you set the colour, and only when something is outputted to the console. To see what I mean, give it a try in a VB console app.
 
 ### Random Number Generation
-There are a few ways to go about generating random numbers in Visual Basic, but my preferred method (and, _technically_, the most random method, although unless you are doing advanced cryptography or need INCREDIBLY random numbers this doesn't really matter) is the one I will outline. Say I have an integer variable, `x`, that I want to be random number in between two other variables, `min` and `max`:
+There are a few ways to go about generating random numbers in Visual Basic, but my preferred method is as follows. Say I have an integer variable, `x`, that I want to be random number in between two other variables, `min` and `max`:
 ```vbnet
 Dim x, min, max As Integer
 min = 1 'The minimum value
@@ -420,6 +426,9 @@ x = Int(Rnd() * max) + min
 ```
 To generate a random number using this method, the `Randomize()` must be called only once at any point before generating the number. I like to put it right at the top of my `Sub Main` in most programs I create
 This code would assign a random integer value that is greater than or equal to the value of `min` (1, in this instance), and less than but **not equal to** the value of `max` (10 in this instance). Or, in [interval notation](https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals), [1,10)
+
+Alternative ways of doing this include using `Random.Shared.Next()`. This was never taught to me, however I believe that the GCSE specification has moved to this method of randomising rather than the one I mentioned previously. Play around with it, see what happens! At the end of the day, you should just use whichever one you feel you can remember the easiest.
+
 
 ### Concatenation
 Concatenation is the joining of multiple strings together, and in VB is relatively simple, and the language gives you a few options of how to do it.
